@@ -12,3 +12,8 @@ export const isTokenActivated = (token) => {
     const decoded = jwt_decode(token)
     return (decoded?.exp > Date.now() / 1000)
 }
+
+export const swapKeyValue = (object) => {
+    if(!object) return {}
+    return Object.fromEntries(Object.entries(object).map(([key, val]) => [val, key]))
+}

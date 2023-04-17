@@ -29,15 +29,15 @@ const useRoutes = () => {
     ], [])
     
     const authRoutes = useCallback((isAuthRoute) => {
-        return routes.filter(({isAuth}) => isAuth === isAuthRoute)
+        return routes.filter(({ isAuth }) => isAuth === isAuthRoute)
     }, [routes])
 
     const publicRoutes = useCallback(() => {
-        return routes.filter(({isPublicallyAccess}) => isPublicallyAccess)
+        return routes.filter(({ isPublicallyAccess }) => isPublicallyAccess)
     }, [routes])
 
     const adminRoutes = useCallback((isPrivate) => {
-        return routes.filter(({isAdmin}) => isAdmin === isPrivate)
+        return routes.filter(({ isAdmin }) => isAdmin === isPrivate)
     }, [routes])
 
   return { routes, authRoutes, publicRoutes, adminRoutes }
