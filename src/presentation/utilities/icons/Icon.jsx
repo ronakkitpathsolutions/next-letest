@@ -1,12 +1,12 @@
 import React from 'react'
-import MenuIcon from '../../../assets/icons/menu.svg'
+import { CgMenuMotion } from 'react-icons/cg'
 
-const Icon = ({id, className, ...props}) => {
-    switch (id) {
-        case 'menu_icon':
-            return <MenuIcon {...{ className }} {...props} />
-        default: return null
-    }
+const Icon = ({type, ...props}) => {
+  switch (type) {
+    case 'menu':
+        return <CgMenuMotion {...props} />
+    default: return null
+  }
 }
 
 export default Icon
