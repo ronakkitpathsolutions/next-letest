@@ -1,10 +1,10 @@
 import React from 'react'
-import { CgMenuMotion } from 'react-icons/cg'
+import { AiOutlineMenu } from 'react-icons/ai'
 
 const Icon = ({type, ...props}) => {
   switch (type) {
     case 'menu':
-        return <CgMenuMotion {...props} />
+        return <AiOutlineMenu {...props} />
     default: return null
   }
 }

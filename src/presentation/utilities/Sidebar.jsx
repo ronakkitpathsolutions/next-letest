@@ -2,16 +2,16 @@ import React, { useState } from 'react'
 import { classNames } from '../../utils/helper';
 import Icon from '../utilities/icons/Icon';
 
-const Navbar = ({Menus, ...props}) => {
+const Navbar = ({Menus = [], ...props}) => {
     const [open, setOpen] = useState(true);
     return (
-        <section {...props} className={classNames('bg-[#726bfa] h-screen p-5  pt-8 relative duration-300', open ? 'w-72' : 'w-20')}>
+        <section {...props} className={classNames('bg-[#726bfa] h-screen p-5  pt-8 relative duration-300', open ? 'w-72' : 'w-[4.25rem]')}>
         <div className="flex gap-x-4 items-center">
             <span className={classNames('cursor-pointer duration-500')} onClick={() => setOpen(!open)}>
-              <Icon type='menu' className="text-white text-[2.25rem]" />
+              <Icon type='menu' className="text-white text-[1.75rem]" />
             </span>
           <h1 className={classNames('text-white origin-left font-medium text-xl duration-200', open ? '' : 'scale-0')}>
-            Designer
+            Form
           </h1>
         </div>
         <ul className="pt-6">
