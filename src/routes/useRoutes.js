@@ -10,7 +10,7 @@ const useRoutes = () => {
         {
             id: 'home',
             path: '/',
-            element : <Home/>,
+            element : <Home allowPublic />,
             isPublicallyAccess: true
         },
         {
@@ -22,7 +22,7 @@ const useRoutes = () => {
         {
             id: 'admin_dashboard',
             path: '/dashboard',
-            element : <Admin/>,
+            element : <Admin isAdmin />,
             isAdmin: true,
             redirectUrl: '/'
         }
