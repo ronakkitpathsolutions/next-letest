@@ -18,4 +18,6 @@ const swapKeyValue = (object) => {
     return Object.fromEntries(Object.entries(object).map(([key, val]) => [val, key]))
 }
 
-export { classNames, decodeToken, isTokenActivated, swapKeyValue }
+const isDesktop = (width) => width >= 786
+
+export { classNames, decodeToken, isTokenActivated, swapKeyValue, isDesktop }
